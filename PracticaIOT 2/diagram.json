@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Luis Arturo Aguilar Guzmán",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -61,
+      "left": 96,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -62.95,
+      "left": -39.8,
+      "rotate": 180,
+      "attrs": { "value": "100" }
+    }
+  ],
+  "connections": [
+    [ "btn1:2.r", "uno:2", "green", [ "h0" ] ],
+    [ "uno:5V", "btn1:1.r", "red", [ "v38.9", "h137.6", "v-278.4" ] ],
+    [ "r1:1", "btn1:2.l", "black", [ "v0" ] ],
+    [ "r1:2", "uno:GND.1", "black", [ "v48.3", "h153.4" ] ]
+  ],
+  "dependencies": {}
+}

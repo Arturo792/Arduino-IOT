@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Luis Arturo Aguilar Guzmán",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -43.2,
+      "left": 85.85,
+      "rotate": 90,
+      "attrs": { "value": "200000" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -138, "left": 99.8, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "r1:2", "uno:GND.1", "green", [ "h0" ] ],
+    [ "led1:C", "r1:1", "green", [ "v0" ] ],
+    [ "led1:A", "uno:1", "green", [ "v48", "h115.2", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
